@@ -1,0 +1,28 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+group = 'ru.clevertec'
+version = '1.2.3'
+
+gradlePlugin {
+    plugins {
+        testPlugins{
+            id="report"
+            implementationClass="plugins.TestReportPlugin"
+        }
+    }
+}
+
+//publishing {
+//    publications {
+//        pluginMaven(MavenPublication) {
+//            from components.java
+//        }
+//    }
+//
+//    repositories {
+//        mavenLocal()
+//    }
+//}

@@ -1,3 +1,4 @@
 rootProject.name = 'utils'
-
+include 'core'
+include 'api'
 
