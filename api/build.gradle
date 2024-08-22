@@ -1,9 +1,13 @@
 plugins {
+    id 'java-library'
     id 'java'
 }
 
+apply plugin: 'jacoco'
+
 group = 'ru.clevertec'
 version = '1.3.5'
+
 
 repositories {
     mavenCentral()
