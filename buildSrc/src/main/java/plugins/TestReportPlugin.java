@@ -54,6 +54,5 @@ public class TestReportPlugin implements Plugin<Project> {
                     .map(subproject -> subproject.getTasks().withType(Task.class).getByName("test"))
                     .collect(Collectors.toList()));
         });
-
     }
 }

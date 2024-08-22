@@ -1,6 +1,5 @@
 plugins {
     id 'java-gradle-plugin'
-    id 'maven-publish'
 }
 
 group = 'ru.clevertec'
@@ -15,14 +14,3 @@ gradlePlugin {
     }
 }
 
-//publishing {
-//    publications {
-//        pluginMaven(MavenPublication) {
-//            from components.java
-//        }
-//    }
-//
-//    repositories {
-//        mavenLocal()
-//    }
-//}

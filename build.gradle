@@ -20,6 +20,13 @@ ext {
     }
 }
 
+dependencies {
+    commonDependencies
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.jacoco:org.jacoco.core:0.8.12'
+}
+
 publishing {
     publications {
         myLibrary(MavenPublication) {
@@ -28,17 +35,9 @@ publishing {
     }
 }
 
-
 repositories {
     mavenCentral()
     mavenLocal()
-}
-
-dependencies {
-    commonDependencies
-    implementation 'org.jacoco:org.jacoco.core:0.8.12'
-    testImplementation platform('org.junit:junit-bom:5.9.1')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
 subprojects {
@@ -65,8 +64,4 @@ jar {
         attributes('Implementation-Title': project.name,
                 'Implementation-Version': project.version)
     }
-}
-
-jacocoTestReport {
-    dependsOn(test)
 }
