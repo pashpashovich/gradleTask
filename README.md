@@ -1,2 +1,2 @@
 # Покрытие тестами классов разных модулей проекта
-![image](https://github.com/user-attachments/assets/138416aa-0a5d-4d97-82ba-72b71bcc2d86)
+![image](https://github.com/user-attachments/assets/c9e02e75-e10d-467c-a9f4-1ab2f44f0755)
