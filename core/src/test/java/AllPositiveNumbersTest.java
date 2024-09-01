@@ -1,7 +1,10 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
 import ru.clevertec.Utils;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 class AllPositiveNumbersTest {
@@ -11,7 +14,7 @@ class AllPositiveNumbersTest {
             "1.7,2.9,3.8",
     })
     void isAllPositiveNumbersTestWithPositiveResults(String first, String second, String third) {
-        Assertions.assertTrue(Utils.isAllPositiveNumbers(first, second, third));
+        assertTrue(Utils.isAllPositiveNumbers(first, second, third));
     }
 
     @ParameterizedTest
@@ -22,6 +25,12 @@ class AllPositiveNumbersTest {
             "1,0,3"
     })
     void isAllPositiveNumbersTestWithNegativeResults(String first, String second, String third) {
-        Assertions.assertFalse(Utils.isAllPositiveNumbers(first, second, third));
+        assertFalse(Utils.isAllPositiveNumbers(first, second, third));
+    }
+
+    @ParameterizedTest
+    @NullAndEmptySource
+    void isAllPositiveNumbersTestWithNullAndEmptyStrings(String number) {
+        assertFalse(Utils.isAllPositiveNumbers(number));
     }
 }
